@@ -29,3 +29,10 @@ Through this project I learnt:
 In order to use the app you should get an API key from themoviedb.org
 Instructions are here: https://docs.google.com/document/d/1ZlN1fUsCSKuInLECcJkslIqvpKlP7jWL2TP9m6UiA6I/pub?embedded=true
 And you should then put the key in build.gradle (Module app) where you can find THEMOVIEDB_API_KEY_GOES_HERE
+
+
+<h2> App's screenshots</h2>
+<p><img src="screenshots/popular_movies_1.png" width="33%"/>   <img src="screenshots/popular_movies_2.png" width="60%"/></p>
+<p><img src="screenshots/popular_movies_3.png" width="33%"/>   <img src="screenshots/popular_movies_4.png" width="33%"/></p>
+<p><img src="screenshots/popular_movies_5.png" width="33%"/>   <img src="screenshots/popular_movies_6.png" width="60%"/></p>
+
