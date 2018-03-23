@@ -34,7 +34,7 @@ public final class MoviesJsonUtils {
             return null;
         }
 
-        // Create an empty ArrayList that we can start adding books to
+        // Create an empty ArrayList that we can start adding movies to
         List<Movie> movies = new ArrayList<>();
 
         // Create a JSONObject from the JSON response string
@@ -58,7 +58,7 @@ public final class MoviesJsonUtils {
                     int voteCount = currentMovie.optInt(JSON_VOTE_COUNT_KEY);
 
                     /* Create a new {@link Movie} object with the title, posterPath, backdropPath,
-                    releaseDate and overview from the JSON response.
+                    releaseDate, overview, voteAverage and voteCount from the JSON response.
                     */
                     Movie movie = new Movie(title, posterPath, backdropPath, releaseDate, overview, voteAverage, voteCount);
                     // Add the new {@link Movie} to the list of movies

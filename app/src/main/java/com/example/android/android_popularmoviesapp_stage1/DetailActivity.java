@@ -3,7 +3,6 @@ package com.example.android.android_popularmoviesapp_stage1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,8 +16,12 @@ import com.squareup.picasso.Picasso;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
 public class DetailActivity extends AppCompatActivity {
+
     private static final String TAG = NetworkUtils.class.getSimpleName();
+    private static final String POSTER_IMAGES_URL = "http://image.tmdb.org/t/p";
+    private static final String POSTER_WIDTH = "w185";
 
     @BindView(R.id.movie_poster_iv)
     ImageView posterView;
@@ -32,7 +35,6 @@ public class DetailActivity extends AppCompatActivity {
     TextView movieVoteAverage;
     @BindView(R.id.movie_vote_count_tv)
     TextView movieVoteCount;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +50,11 @@ public class DetailActivity extends AppCompatActivity {
                 ButterKnife.bind(this);
                 // Display the current selected movie title on the Action Bar
                 getSupportActionBar().setTitle(movie.getTitle());
-                Log.v(TAG, "Detail Activity: " + movie.getPosterUrl());
-                String movieUrl = NetworkUtils.POSTER_IMAGES_URL + movie.getBackdropPath();
+
+                String movieUrl = POSTER_IMAGES_URL + "/" + POSTER_WIDTH + movie.getBackdropPath();
                 Picasso.with(posterView.getContext()).load(movieUrl)
                         .placeholder(R.drawable.movie_placeholder)
-                        .error(R.mipmap.ic_launcher)
+                        .error(R.drawable.no_image)
                         .into(posterView);
 
                 movieTitle.setText(movie.getTitle());
@@ -82,7 +84,6 @@ public class DetailActivity extends AppCompatActivity {
             startActivity(new Intent(this, SettingsActivity.class));
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

@@ -21,7 +21,6 @@
         android:paddingRight="@dimen/default_padding"
         android:paddingTop="@dimen/default_padding"
         android:text="Movie's Title"
-
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
 
     <TextView
@@ -85,7 +84,6 @@
             android:paddingTop="@dimen/default_padding"
             android:text="Movie's Vote Average" />
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -110,7 +108,5 @@
             android:paddingTop="@dimen/default_padding"
             android:text=" votes)" />
 
-
     </LinearLayout>
-
 </LinearLayout>

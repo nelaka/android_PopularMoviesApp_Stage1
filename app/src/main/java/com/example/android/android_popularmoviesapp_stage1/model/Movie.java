@@ -17,7 +17,6 @@ public class Movie implements Parcelable {
     };
     private String mTitle;
     private String mPosterUrl;
-
     private String mOverview;  //plot synopsis
     private float mVoteAverage;  //user rating
     private int mVoteCount; //vote count
@@ -88,9 +87,3 @@ public class Movie implements Parcelable {
         out.writeInt(mVoteCount);
     }
 }
-
-
-
-
-
-

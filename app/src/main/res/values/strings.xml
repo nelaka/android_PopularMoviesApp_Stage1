@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">Popular Movies</string>
-    <string name="poster_desc">bla bla</string>
+    <string name="poster_desc">poster of the movie</string>
 
     <!-- Used to open Settings Menu from MainActivity and DetailActivity -->
     <string name="action_settings">Settings</string>
     <string name="title_activity_settings">Settings</string>
+    <!--Used in overflow menu to refresh weather data-->
+    <string name="action_refresh">Refresh</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="title_activity_detail">Movie\'s Details</string>
 
 
@@ -36,6 +37,6 @@
     <string name="release_date">Release Date:</string>
 
     <string name="error_message">
-        A network error has occurred. No connection. Please try again by clicking REFRESH.
+        A network error has occurred. No connection. Please try again.
     </string>
 </resources>

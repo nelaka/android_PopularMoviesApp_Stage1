@@ -1,6 +1,5 @@
 package com.example.android.android_popularmoviesapp_stage1;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +14,6 @@ import com.example.android.android_popularmoviesapp_stage1.utils.NetworkUtils;
 public class MainActivity extends AppCompatActivity implements MoviesAdapter.MoviesAdapterOnClickHandler {
 
     private static final String TAG = NetworkUtils.class.getSimpleName();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +49,5 @@ public class MainActivity extends AppCompatActivity implements MoviesAdapter.Mov
         intent.putExtra("movie", movie);
 
         getApplicationContext().startActivity(intent);
-
     }
-
-
 }

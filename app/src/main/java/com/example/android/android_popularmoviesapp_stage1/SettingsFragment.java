@@ -11,9 +11,8 @@ import android.support.v7.preference.PreferenceManager;
 import com.example.android.android_popularmoviesapp_stage1.utils.NetworkUtils;
 
 public class SettingsFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener {
-    private static final String TAG = NetworkUtils.class.getSimpleName();
 
-//    Preference.OnPreferenceChangeListener onPreferenceChangeListener;
+    private static final String TAG = NetworkUtils.class.getSimpleName();
 
     public SettingsFragment() {
         // Required empty public constructor
@@ -45,10 +44,8 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
 
         if (!(preference instanceof CheckBoxPreference)) {
             rootKey = mSortByPref.getString(preference.getKey(), "missing");
-            //  Log.v(TAG, "value: " + rootKey);
             setPreferenceSummary(preference, rootKey);
         }
-        //preference.setOnPreferenceChangeListener(onPreferenceChangeListener);
         onSharedPreferenceChanged(mSortByPref, mSortByPref.getString(preference.getKey(), "missing"));
     }
 
