@@ -24,3 +24,8 @@ Through this project I learnt:
 <li>to use adapters and custom list layouts to populate list views.</li>
 <li>to incorporate libraries to simplify the amount of code I need to write.</li>
 </ul>
+
+
+In order to use the app you should get an API key from themoviedb.org
+Instructions are here: https://docs.google.com/document/d/1ZlN1fUsCSKuInLECcJkslIqvpKlP7jWL2TP9m6UiA6I/pub?embedded=true
+And you should then put the key in build.gradle (Module app) where you can find THEMOVIEDB_API_KEY_GOES_HERE
