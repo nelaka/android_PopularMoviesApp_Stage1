@@ -22,7 +22,7 @@ if (sensitiveDataFile.canRead()){
 // sensitive data by replacing the strings beginning with REVIEWERS_
 // Just double click on the string and paste you own data
 if (theMovieDbApiKey == noKeyFound) {
-    theMovieDbApiKey = '"REVIEWERS_THEMOVIEDB_API_KEY_GOES_HERE"'
+    theMovieDbApiKey = '"THEMOVIEDB_API_KEY_GOES_HERE"'
 }
 // End of reading the sensitive data
 
