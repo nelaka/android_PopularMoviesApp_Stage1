@@ -3,6 +3,8 @@ package com.example.android.android_popularmoviesapp_stage1;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -158,7 +160,14 @@ public class MainActivityFragment extends Fragment implements MoviesAdapter.Movi
 
             @Override
             protected void onStartLoading() {
-                if (!mMovieData.isEmpty()) {
+                ConnectivityManager cm =
+                        (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+                NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+                boolean isConnected = activeNetwork != null &&
+                        activeNetwork.isConnectedOrConnecting();
+
+                if (isConnected && !mMovieData.isEmpty()) {
                     deliverResult(mMovieData);
 
                 } else {
