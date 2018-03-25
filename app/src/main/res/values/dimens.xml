@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <integer name="no_of_columns">4</integer>
     <dimen name="column_width">92dp</dimen>
     <dimen name="poster_height">185dp</dimen>
     <dimen name="default_padding">16dp</dimen>

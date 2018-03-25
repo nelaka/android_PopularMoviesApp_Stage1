@@ -63,12 +63,13 @@ public class MainActivityFragment extends Fragment implements MoviesAdapter.Movi
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        final int noOfColumns = getResources().getInteger(R.integer.no_of_columns);
+
         int loaderId = MOVIES_LOADER_ID;
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
         ButterKnife.bind(this, rootView);
 
-        int noOfColumns = 4;
         GridLayoutManager layoutManager =
                 new GridLayoutManager(mContext, noOfColumns);
 
